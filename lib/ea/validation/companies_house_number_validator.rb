@@ -10,7 +10,7 @@
 # the last seven numbers although the company number is actually eight digits and has a leading zero which is omitted.
 #
 module Ea
-  module Validators
+  module Validation
 
     class CompaniesHouseNumberValidator < ActiveModel::EachValidator
 
@@ -21,7 +21,7 @@ module Ea
         unless value =~ VALID_COMPANIES_HOUSE_REGISTRATION_NUMBER_REGEX
           record.errors.add(
             attribute,
-            (options[:message] || I18n.t("ea.validation_errors.companies_house_number.#{attribute}.invalid_html"))
+            (options[:message] || I18n.t("ea.validation.errors.companies_house_number.#{attribute}.invalid_html"))
           )
         end
       end

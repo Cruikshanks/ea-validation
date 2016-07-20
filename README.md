@@ -37,5 +37,5 @@ registration number. This validator checks that the company registration
 number complies to these restrictions.
 
 ```ruby
-validates :number, "ea/validators/companies_house_number" => true
+validates :number, "ea/validation/companies_house_number" => true
 ```
