@@ -39,3 +39,27 @@ number complies to these restrictions.
 ```ruby
 validates :number, "ea/validation/companies_house_number" => true
 ```
+
+### Grid Reference
+
+A grid reference should be of the form AA 12345 67890 (spaces optional).
+The validator checks the format, and the the grid reference is valid.
+
+```ruby
+validates :grid_reference, "ea/validation/grid_reference" => true
+```
+
+## Modifications
+
+Options can be passed into validation by replacing `true` with an options
+hash. For example:
+
+```ruby
+validates(
+  :grid_reference,
+  "ea/validation/grid_reference" => {
+    message: "Custom",
+    allow_blank: true
+  }
+)
+```
