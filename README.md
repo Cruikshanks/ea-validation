@@ -1,6 +1,8 @@
 # Ea::Validation
 
 [![Build Status](https://travis-ci.org/EnvironmentAgency/ea-validation.svg?branch=master)](https://travis-ci.org/EnvironmentAgency/ea-validation)
+[![Code Climate](https://codeclimate.com/github/EnvironmentAgency/ea-validation/badges/gpa.svg)](https://codeclimate.com/github/EnvironmentAgency/ea-validation)
+[![Test Coverage](https://codeclimate.com/github/EnvironmentAgency/ea-validation/badges/coverage.svg)](https://codeclimate.com/github/EnvironmentAgency/ea-validation/coverage)
 [![security](https://hakiri.io/github/EnvironmentAgency/ea-validation/master.svg)](https://hakiri.io/github/EnvironmentAgency/ea-validation/master)
 [![Dependency Status](https://dependencyci.com/github/EnvironmentAgency/ea-validation/badge)](https://dependencyci.com/github/EnvironmentAgency/ea-validation)
 
