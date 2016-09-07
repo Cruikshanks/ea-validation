@@ -6,12 +6,12 @@ require "ea/validation/version"
 Gem::Specification.new do |spec|
   spec.name          = "ea-validation"
   spec.version       = Ea::Validation::VERSION
-  spec.authors       = ["Rob Nichols"]
-  spec.email         = ["git@nicholshayes.co.uk"]
+  spec.authors       = ["Rob Nichols, Alan Cruikshanks"]
+  spec.email         = ["alan.cruikshanks@environment-agency.gov.uk"]
   spec.license       = "LICENSE"
   spec.summary       = "Package of validations commonly used in EA projects"
   spec.description   = "Package containing validations: ."
-  spec.homepage      = "https://github.com/reggieb/ea-validation"
+  spec.homepage      = "https://github.com/EnvironmentAgency/ea-validation"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"
@@ -23,7 +23,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.11"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
-  spec.add_development_dependency "before_commit"
   spec.add_development_dependency "virtus"
-  spec.add_development_dependency "rubocop"
 end
