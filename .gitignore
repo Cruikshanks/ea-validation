@@ -7,10 +7,3 @@
 /pkg/
 /spec/reports/
 /tmp/
-
-# Overcommit configuration files
-.overcommit*
-.git-hooks/
-rubocop/
-.rubocop.yml
-.htmlhintrc
