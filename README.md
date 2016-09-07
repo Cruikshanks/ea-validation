@@ -1,5 +1,9 @@
 # Ea::Validation
 
+[![Build Status](https://travis-ci.org/EnvironmentAgency/ea-validation.svg?branch=master)](https://travis-ci.org/EnvironmentAgency/ea-validation)
+[![security](https://hakiri.io/github/EnvironmentAgency/ea-validation/master.svg)](https://hakiri.io/github/EnvironmentAgency/ea-validation/master)
+[![Dependency Status](https://dependencyci.com/github/EnvironmentAgency/ea-validation/badge)](https://dependencyci.com/github/EnvironmentAgency/ea-validation)
+
 ## Installation
 
 Add this line to your application's Gemfile
