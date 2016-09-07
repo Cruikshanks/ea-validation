@@ -6,9 +6,9 @@ require "ea/validation/version"
 Gem::Specification.new do |spec|
   spec.name          = "ea-validation"
   spec.version       = Ea::Validation::VERSION
-  spec.authors       = ["Rob Nichols, Alan Cruikshanks"]
+  spec.authors       = ["Environment Agency"]
   spec.email         = ["alan.cruikshanks@environment-agency.gov.uk"]
-  spec.license       = "LICENSE"
+  spec.license       = "The Open Government Licence (OGL) Version 3"
   spec.summary       = "Package of validations commonly used in EA projects"
   spec.description   = "Package containing validations: ."
   spec.homepage      = "https://github.com/EnvironmentAgency/ea-validation"
