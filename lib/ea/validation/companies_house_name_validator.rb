@@ -17,19 +17,10 @@ module Ea
         if VALID_COMPANIES_HOUSE_NAME_REGEX.match(value)
           record.errors.add(
             attribute,
-            (
-            options[:message] ||
-              I18n.t(
-                "ea.validation.errors.companies_house_name.invalid",
-                invalid: CompaniesHouseNameValidator::disallowed_chars.join(", ")
-              )
-            )
+            ( options[:message] ||I18n.t("ea.validation.errors.companies_house_name.invalid",
+                                       invalid: CompaniesHouseNameValidator::disallowed_chars.join(", ")) )
           )
         end
-      end
-
-      def self.name_max_length
-        170
       end
 
       def self.disallowed_chars
