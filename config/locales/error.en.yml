@@ -1,0 +1,12 @@
+en:
+  ea:
+    validation:
+      errors:
+        companies_house_number:
+          registration_number:
+            invalid_html: Enter a valid number - it should have 8 digits, or 2 letters followed by 6 digits
+              </br>If your number has only 7 digits, enter it with a zero at the start.
+        companies_house_name:
+          blank: Enter the registered name of the company
+          invalid: "The company name cannot contain any of these characters: %{invalid}"
+          too_long: Check the name - it should have no more than %{max_length} characters
