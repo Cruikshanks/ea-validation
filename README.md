@@ -49,6 +49,12 @@ This validator checks that the company registration number complies to these res
 validates :number, "ea/validation/companies_house_number" => true
 ```
 
+A locale hint is available for your views, that details the restrictions, e.g
+
+```ruby
+    <span class="form-hint"><%= t('ea.validation.errors.companies_house_number.hint') %></span>
+ ```   
+ 
 ### Grid Reference
 
 A grid reference should be of the form AA 12345 67890 (spaces optional). 
