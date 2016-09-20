@@ -11,5 +11,9 @@ en:
           invalid: "The company name cannot contain any of these characters: %{invalid}"
           too_long: Check the name - it should have no more than %{max_length} characters
         grid_reference:
-          invalid: The grid reference should have 2 letters and 10 digits
           blank: Enter a grid reference
+          invalid: The grid reference should have 2 letters and 10 digits
+        text_only_content:
+          blank: Enter a %{field}
+          invalid: Make sure the %{field} contains only letters, spaces, commas, full stops, hyphens and apostrophes
+

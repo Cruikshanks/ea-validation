@@ -42,7 +42,8 @@ validates :name, "ea/validation/companies_house_name_length" => true
   
 ### Companies House number
 
-As with company names, there are also restrictions to the form of a company registration number. This validator checks that the company registration number complies to these restrictions.
+As with company names, there are also restrictions to the form of a company registration number. 
+This validator checks that the company registration number complies to these restrictions.
 
 ```ruby
 validates :number, "ea/validation/companies_house_number" => true
@@ -63,6 +64,23 @@ Use the following format, to also check for the presence of the grid reference.
 validates :grid_reference, presence: { message: I18n.t("ea.validation.errors.grid_reference.blank") }
 
 validates :grid_reference, "ea/validation/grid_reference" => true, allow_blank: true
+```
+ 
+  
+### Text Only Content
+  
+Check a text field contains only letters and EA allowable characters.
+ 
+```ruby
+validates :some_text_field, "ea/validation/text_only_content_validator" => true
+```
+
+Use the following format, to also check for the presence of text, pass required field name to the error message.
+
+```ruby
+validates :name, presence: { message: I18n.t("ea.validation.errors.text_only_content.blank", field: 'name') }
+
+validates :name, "ea/validation/text_only_content": true, allow_blank: true
 ```
   
 ## Modifications
