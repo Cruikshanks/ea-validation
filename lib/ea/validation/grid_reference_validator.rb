@@ -15,7 +15,7 @@ module Ea
         @value = value
         return true if allow_blank && value.blank?
         return true unless os_map_ref_detects_error? || invalid_pattern?
-        record.errors.add attribute, @message || I18n.t("ea.validation.errors.grid_reference.invalid")
+        record.errors.add attribute, message || I18n.t("ea.validation.errors.grid_reference.invalid")
       end
 
       private
