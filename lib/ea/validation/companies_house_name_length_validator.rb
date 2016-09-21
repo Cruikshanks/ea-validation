@@ -5,13 +5,11 @@ module Ea
     class CompaniesHouseNameLengthValidator < ActiveModel::EachValidator
 
       def validate_each(record, attribute, value)
-        if value.to_s.size >  CompaniesHouseNameLengthValidator.max_length
-          record.errors.add(
-            attribute,
-            ( options[:message] ||I18n.t("ea.validation.errors.companies_house_name.too_long",
-                                         max_length: CompaniesHouseNameLengthValidator.max_length) )
-          )
-        end
+        record.errors.add(
+          attribute,
+          (options[:message] || I18n.t("ea.validation.errors.companies_house_name.too_long",
+                                       max_length: CompaniesHouseNameLengthValidator.max_length))
+        ) if value.to_s.size > CompaniesHouseNameLengthValidator.max_length
       end
 
       def self.max_length
@@ -21,4 +19,3 @@ module Ea
     end
   end
 end
-

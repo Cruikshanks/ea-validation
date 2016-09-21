@@ -6,11 +6,10 @@ module Ea
     class TextOnlyContentValidator < ActiveModel::EachValidator
 
       def validate_each(record, attribute, value)
-        if value !~ valid_name_regex
-          record.errors.add attribute,
-                            options[:message] ||
-                              I18n.t("ea.validation.errors.text_only_content.invalid", field: attribute)
-        end
+        record.errors.add(
+          attribute, options[:message] ||
+          I18n.t("ea.validation.errors.text_only_content.invalid", field: attribute)
+        ) if value !~ valid_name_regex
       end
 
       def valid_name_regex

@@ -1,6 +1,6 @@
 module Ea
   class Engine < ::Rails::Engine
-    isolate_namespace  Ea
+    isolate_namespace Ea
 
     # Add a load path for this specific Engine
     config.autoload_paths += Dir["#{config.root}/lib/**/"]

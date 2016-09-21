@@ -23,7 +23,7 @@ module Ea
       def os_map_ref_detects_error?
         OsMapRef::Location.for(value).easting
         false
-      rescue OsMapRef::Error => e
+      rescue OsMapRef::Error # error message is not useful - not descriptive
         true
       end
 
