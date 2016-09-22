@@ -17,12 +17,11 @@ module Ea
 
       def validate_each(record, attribute, value)
         value.strip!
-        unless value =~ VALID_COMPANIES_HOUSE_REGISTRATION_NUMBER_REGEX
-          record.errors.add(
-            attribute,
-            (options[:message] || I18n.t("ea.validation.errors.companies_house_number.#{attribute}.invalid_html"))
-          )
-        end
+
+        record.errors.add(
+          attribute,
+          options[:message] || I18n.t("ea.validation.errors.companies_house_number.invalid_html")
+        ) unless value =~ VALID_COMPANIES_HOUSE_REGISTRATION_NUMBER_REGEX
       end
     end
 

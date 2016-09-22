@@ -6,6 +6,7 @@
 #
 # Illegal characters - the company name cannot contain any of these characters: ^ | _ ~ ¬ or `
 #
+
 module Ea
   module Validation
     class CompaniesHouseNameValidator < ActiveModel::EachValidator
@@ -13,16 +14,11 @@ module Ea
       VALID_COMPANIES_HOUSE_NAME_REGEX = Regexp.new(/[\^|_~¬`]/).freeze
 
       def validate_each(record, attribute, value)
-        if VALID_COMPANIES_HOUSE_NAME_REGEX.match(value)
-          record.errors.add(
-            attribute,
-            (options[:message] || I18n.t("ea.validation.errors.companies_house_name.#{attribute}.invalid"))
-          )
-        end
-      end
-
-      def self.name_max_length
-        170
+        record.errors.add(
+          attribute,
+          (options[:message] || I18n.t("ea.validation.errors.companies_house_name.invalid",
+                                       invalid: CompaniesHouseNameValidator.disallowed_chars.join(", ")))
+        ) if VALID_COMPANIES_HOUSE_NAME_REGEX.match(value)
       end
 
       def self.disallowed_chars

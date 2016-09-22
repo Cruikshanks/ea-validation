@@ -15,7 +15,7 @@ module Ea
         @value = value
         return true if allow_blank && value.blank?
         return true unless os_map_ref_detects_error? || invalid_pattern?
-        record.errors.add attribute, message
+        record.errors.add attribute, message || I18n.t("ea.validation.errors.grid_reference.invalid")
       end
 
       private
@@ -23,8 +23,8 @@ module Ea
       def os_map_ref_detects_error?
         OsMapRef::Location.for(value).easting
         false
-      rescue OsMapRef::Error => e
-        @message ||= e.message
+      rescue OsMapRef::Error # error message is not useful - not descriptive
+        true
       end
 
       # Note that OsMapRef will work with less stringent coordinates than are
